@@ -3,7 +3,8 @@
 
 ![image](./media/teaser.png)
 
-[[Arxiv](https://arxiv.org/abs/2308.15536)] [[Project page](https://davidxu-jj.github.io/pubs/DebSDF/)]
+[[Arxiv](https://arxiv.org/abs/2308.15536)] [[Project page](https://davidxu-jj.github.io/pubs/DebSDF/)] (Arxiv 2023)
+
 
 # Abstract
 
