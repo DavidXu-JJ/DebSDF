@@ -12,7 +12,9 @@ In recent years, the neural implicit surface has emerged as a powerful represent
 
 # Video Preview
 
-![video](./media/preview.mp4)
+<video width="960" height="544" controls>
+  <source src="./media/preview.mp4" type="video/mp4">
+</video>
 
 More results are presented in the [project page](https://davidxu-jj.github.io/pubs/DebSDF/).
 
