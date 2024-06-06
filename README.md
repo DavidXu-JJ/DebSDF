@@ -46,7 +46,7 @@ More results are presented in the [project page](https://davidxu-jj.github.io/pu
 
 For the preprocessed training data, please download from [google drive](https://drive.google.com/drive/folders/1bTTIxfaHnX-3bfTt-QIzbsAvtn96BZ53?usp=sharing).
 
-Our training data is adapted from [MonoSDF](https://github.com/niujinshuchong/monosdf).
+Our training data is adapted from [MonoSDF](https://github.com/autonomousvision/monosdf).
 
 Some scene files have been provided by various artists for free on BlendSwap. Please refer to the table below for license information and links to the .blend files.
 
@@ -60,13 +60,17 @@ Some scene files have been provided by various artists for free on BlendSwap. Pl
 | CC-0          | [Morning apartment](https://blendswap.com/blend/10350) |
 | CC-BY         | [Whiteroom](https://blendswap.com/blend/5014)          |
 
+### Run With Your Own Data
+
+Please consider following the guidelines provided by [MonoSDF](https://github.com/autonomousvision/monosdf?tab=readme-ov-file#high-resolution-cues).
+
 ## Code
 
 Working in process.
 
 ## Acknowledgement
 
-Our code is based upon [MonoSDF](https://github.com/niujinshuchong/monosdf). Additional training data is also processed with [Omnidata](https://omnidata.vision/) for monocular depth and normal extraction.
+Our code is based upon [MonoSDF](https://github.com/autonomousvision/monosdf). Additional training data is also processed with [Omnidata](https://omnidata.vision/) for monocular depth and normal extraction.
 
 ## Bibtex
 ```bibtex
