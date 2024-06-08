@@ -66,7 +66,7 @@ Please consider following the guidelines provided by [MonoSDF](https://github.co
 
 ## Code
 
-Working in process.
+Working in process. Please see issue https://github.com/DavidXu-JJ/DebSDF/issues/4 for details.
 
 ## Acknowledgement
 
