@@ -5,7 +5,7 @@ import argparse
 import torch
 
 import os
-from training.monosdf_train import DebSDFTrainRunner
+from training.debsdf_train import DebSDFTrainRunner
 import datetime
 
 if __name__ == '__main__':
