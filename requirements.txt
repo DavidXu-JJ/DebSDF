@@ -1,0 +1,10 @@
+trimesh
+pyhocon
+tqdm
+scikit-image
+matplotlib
+opencv-python
+tensorboard
+scipy
+numpy
+cachetools
