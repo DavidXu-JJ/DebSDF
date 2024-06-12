@@ -171,7 +171,7 @@ root_dir = "../exps/"
 exp_name = "neural_rgbd_mlp"
 out_dir = f"evaluation/{exp_name}"
 Path(out_dir).mkdir(parents=True, exist_ok=True)
-evaluation_txt_file = "evaluation/scenenet_mlp.csv"
+evaluation_txt_file = "evaluation/neural_rgbd_mlp.csv"
 evaluation_txt_file = open(evaluation_txt_file, 'w')
 
 scenes = ['breakfast_room', 'complete_kitchen', 'green_room', 'grey_white_room', 'kitchen', 'morning_apartment',
@@ -185,7 +185,7 @@ for idx, scan in zip(idxes, scenes):
     cur_root = os.path.join(root_dir, cur_exp)
     # use first timestamps
     dirs = sorted(os.listdir(cur_root))
-    cur_root = os.path.join(cur_root, dirs[-1])
+    cur_root = os.path.join(cur_root, dirs[0])
     files = list(filter(os.path.isfile, glob.glob(os.path.join(cur_root, "plots/*.ply"))))
 
     # evalute the latest mesh

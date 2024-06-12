@@ -143,7 +143,7 @@ root_dir = "../exps/"
 exp_name = "scannet_mlp"
 out_dir = "evaluation/scannet_mlp"
 Path(out_dir).mkdir(parents=True, exist_ok=True)
-evaluation_txt_file = "evaluation/scenenet_mlp.csv"
+evaluation_txt_file = "evaluation/scannet_mlp.csv"
 evaluation_txt_file = open(evaluation_txt_file, 'w')
 
 scenes = ["scene0050_00", "scene0084_00", "scene0580_00", "scene0616_00"]
