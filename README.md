@@ -257,6 +257,12 @@ Similarly, for BlenderSwap(Should be align with the metrics ICL-NUIM in paper ta
 sh scripts/neural_rgbd_checkpoint_inference.sh
 ```
 
+Similarly, for Replica:
+
+```
+sh scripts/replica_checkpoint_inference.sh
+```
+
 
 ## Acknowledgement
 
