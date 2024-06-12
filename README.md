@@ -2,6 +2,7 @@
 <p align="center">
 
   <h1 align="center">DebSDF: Delving into the Details and Bias of Neural Indoor Scene Reconstruction</h1>
+  <h3 align="center">TPAMI 2024</h3>
   <p align="center">
     <a href="https://scholar.google.com/citations?user=AioOVwEAAAAJ&hl=en"><strong>Yuting Xiao<sup>1*</sup></strong></a>
     ·    
