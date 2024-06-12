@@ -252,7 +252,7 @@ Then directly run:
 sh scripts/scannet_checkpoint_inference.sh
 ```
 
-Similarly, for BlenderSwap(Should be align with the metrics ICL-NUIM in paper table):
+Similarly, for BlenderSwap Scenes(Should be align with the metrics ICL-NUIM in paper table):
 
 ```
 sh scripts/neural_rgbd_checkpoint_inference.sh
@@ -263,6 +263,8 @@ Similarly, for Replica:
 ```
 sh scripts/replica_checkpoint_inference.sh
 ```
+
+For TNT Advanced, please view [here](https://drive.google.com/drive/folders/1gAgrNOkKPlOb1PdbAEqig2WMnCK--zh7?usp=sharing) for our submitted files.
 
 
 ## Acknowledgement

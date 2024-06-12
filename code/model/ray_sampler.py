@@ -18,6 +18,8 @@ def sdf_mapping(sdf, radius_of_curvature, gradients, ray_dirs, pts_blend_uncerta
     abs_cos_theta = (normals * ray_dirs[:, None]).sum(dim=-1).abs()
 
     # Equation (24) Progressive Warm-up
+    # Note: the 2 here maybe sensitive to the dataset used
+    #       different datasets may have different uncertainty scale
     abs_cos_theta = torch.pow(abs_cos_theta, (2 * pts_blend_uncertainty.detach() * n).clamp(0.0, 1.0)).clamp(0, 1)
 
     theta = torch.acos(abs_cos_theta)
