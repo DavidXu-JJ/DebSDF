@@ -337,10 +337,6 @@ class SceneDatasetDN(torch.utils.data.Dataset):
     def load_uncertainty_by_idx(self, idx, uncertainty_map):
         self.prob_map[idx].copy_(uncertainty_map)
 
-    # def load_uncertainty_by_idx_map(self, idx, idx_map, uncertainty_map):
-    #     idx_map = idx_map[..., 1] * self.img_res[0] + idx_map[..., 0]
-    #     self.prob_map[idx][idx_map] = uncertainty_map
-
     def change_res(self, res):
         x_scale, y_scale = res[0] / self.img_res[0], res[1] / self.img_res[1]
         self.img_res = res

@@ -167,7 +167,7 @@ class DebSDFTrainRunner():
 
             # copy saved uncertainty map from old checkpoint to current checkpoint
             saved_maps = find_max_blend_uncertainty_path(old_checkpnts_dir)
-            if os.path.exists(saved_maps):
+            if saved_maps is not None and os.path.exists(saved_maps):
                 self.train_dataset.load_uncertainty_map(saved_maps)
                 self.refresh_dataloader()
                 blend_uncertainty_checkpoint_epoch = saved_maps.split("BlendUncertainty")[-1]
@@ -219,6 +219,8 @@ class DebSDFTrainRunner():
                                                  grid_boundary=self.plot_conf['grid_boundary'],
                                                  level=0
                                                  )
+        if not self.do_vis:
+            return
         utils.mkdir_ifnotexists(os.path.join(self.plots_dir, "depth"))
         utils.mkdir_ifnotexists(os.path.join(self.plots_dir, "depth_files"))
         utils.mkdir_ifnotexists(os.path.join(self.plots_dir, "rendering"))
@@ -278,6 +280,7 @@ class DebSDFTrainRunner():
 
         if (self.is_continue == True and self.start_epoch == self.nepochs):
             print("Training has already been finished. Start Inferring...")
+            self.do_vis = False
             self.final_evaluate_model(epoch)
             return
 
@@ -291,10 +294,6 @@ class DebSDFTrainRunner():
             # save checkpoint
             if self.GPU_INDEX == 0 and epoch % self.checkpoint_freq == 0:
                 self.save_checkpoints(epoch)
-                # if self.train_dataset.uncer_sampler:
-                #     uncertainty_path = os.path.join(self.checkpoints_path, "BlendUncertainty{}".format(epoch))
-                #     utils.mkdir_ifnotexists(uncertainty_path)
-                #     self.train_dataset.save_prob_maps(uncertainty_path)
 
             # refreshing the stored uncertainty map
             if self.GPU_INDEX == 0 and (epoch in self.uncertainty_map_refresh):
@@ -361,15 +360,6 @@ class DebSDFTrainRunner():
 
                 self.optimizer.zero_grad()
                 model_outputs = self.model(model_input, indices, self.iter_step)
-
-                # blend_uncertainty_detach = model_outputs['blend_uncertainty'].detach()
-                # blend_uncertainty = blend_uncertainty_detach.cpu()
-                # idx_map_detach = model_input['uv'][0].detach()
-                # idx_map = idx_map_detach.cpu().long()
-                # if self.iter_step >= self.uncertainty_map_refresh[0]:
-                #     self.train_dataset.load_uncertainty_by_idx_map(indices, idx_map, blend_uncertainty)
-                #
-                # del blend_uncertainty_detach, idx_map_detach
 
                 loss_output = self.loss(model_outputs, ground_truth, self.iter_step)
                 loss = loss_output['loss']

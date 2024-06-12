@@ -174,6 +174,89 @@ python3 evaluate.py
 
 You need to submit the reconstruction results to the [official evaluation server](https://www.tanksandtemples.org), please follow their guidance. We provide an example of our submission at [this link](https://drive.google.com/drive/folders/1gAgrNOkKPlOb1PdbAEqig2WMnCK--zh7?usp=sharing).
 
+## Official Checkpoint Evaluation
+
+Please download the corresponding checkpoint from [this link](https://drive.google.com/drive/folders/1pevxYfdM8D-0E5pcYtVTVFqp9ijqpTr8?usp=sharing).
+
+And then extract the zip files to `./exps` folder.
+
+For example, please download `scannet_exps.zip` from [this link](https://drive.google.com/drive/folders/1pevxYfdM8D-0E5pcYtVTVFqp9ijqpTr8?usp=sharing). And the file tree of the extracted zip file is like:
+
+```
+├── scannet_mlp_1
+│   └── _pretrained
+│       ├── checkpoints
+│       │   ├── ModelParameters
+│       │   │   └── latest.pth
+│       │   ├── OptimizerParameters
+│       │   │   └── latest.pth
+│       │   └── SchedulerParameters
+│       │       └── latest.pth
+│       └── runconf.conf
+├── scannet_mlp_2
+│   └── _pretrained
+│       ├── checkpoints
+│       │   ├── ModelParameters
+│       │   │   └── latest.pth
+│       │   ├── OptimizerParameters
+│       │   │   └── latest.pth
+│       │   └── SchedulerParameters
+│       │       └── latest.pth
+│       └── runconf.conf
+├── scannet_mlp_3
+│   └── _pretrained
+│       ├── checkpoints
+│       │   ├── ModelParameters
+│       │   │   └── latest.pth
+│       │   ├── OptimizerParameters
+│       │   │   └── latest.pth
+│       │   └── SchedulerParameters
+│       │       └── latest.pth
+│       └── runconf.conf
+└── scannet_mlp_4
+    └── _pretrained
+        ├── checkpoints
+        │   ├── ModelParameters
+        │   │   └── latest.pth
+        │   ├── OptimizerParameters
+        │   │   └── latest.pth
+        │   └── SchedulerParameters
+        │       └── latest.pth
+        └── runconf.conf
+```
+
+Please place the folder like:
+
+```
+.
+├── README.md
+├── code
+├── evaluation_requirements.txt
+├── exps
+│   ├── scannet_mlp_1
+│   ├── scannet_mlp_2
+│   ├── scannet_mlp_3
+│   └── scannet_mlp_4
+├── media
+├── neural_rgbd_eval
+├── replica_eval
+├── requirements.txt
+└── scannet_eval
+```
+
+Then directly run:
+
+```
+sh scripts/scannet_checkpoint_inference.sh
+```
+
+Similarly, for BlenderSwap(Should be align with the metrics ICL-NUIM in paper table):
+
+```
+sh scripts/neural_rgbd_checkpoint_inference.sh
+```
+
+
 ## Acknowledgement
 
 Our code is based upon [MonoSDF](https://github.com/autonomousvision/monosdf). Additional training data is also processed with [Omnidata](https://omnidata.vision/) for monocular depth and normal extraction.
