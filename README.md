@@ -30,6 +30,7 @@
   </table>
 
 ## News
+* **[2024.6.12]** Checkpoint release.
 * **[2024.6.11]** Code release.
 * **[2024.6.6]** Training data released.
 * **[2024.6.5]** Accepted to TPAMI 2024. Congratulations to every author.
