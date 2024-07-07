@@ -273,12 +273,10 @@ Our code is based upon [MonoSDF](https://github.com/autonomousvision/monosdf). A
 
 ## Bibtex
 ```bibtex
-@misc{xiao2023debsdf,
-      title={DebSDF: Delving into the Details and Bias of Neural Indoor Scene Reconstruction}, 
-      author={Yuting Xiao and Jingwei Xu and Zehao Yu and Shenghua Gao},
-      year={2023},
-      eprint={2308.15536},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@article{debsdf2024,
+    title={DebSDF: Delving into the Details and Bias of Neural Indoor Scene Reconstruction},
+    author={Yuting Xiao and Jingwei Xu and Zehao Yu and Shenghua Gao},
+    journal={IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)},
+    year={2024}
 }
 ```
