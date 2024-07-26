@@ -30,6 +30,7 @@
   </table>
 
 ## News
+* **[2024.7.26]** Training data updated.
 * **[2024.6.12]** Checkpoint release.
 * **[2024.6.11]** Code release.
 * **[2024.6.6]** Training data released.
@@ -54,6 +55,8 @@ pip install torch==2.2.2 torchvision==0.17.2 torchaudio==2.2.2 --index-url https
 ## Dataset
 
 For the preprocessed training data, please download from [google drive](https://drive.google.com/drive/folders/1bTTIxfaHnX-3bfTt-QIzbsAvtn96BZ53?usp=sharing).
+
+https://github.com/DavidXu-JJ/DebSDF/issues/7#issuecomment-2253295649: Please download this training data again, if you download the data before [2024.7.26]
 
 Please extract the data to the `./data` folder.
 
