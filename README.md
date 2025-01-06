@@ -50,6 +50,7 @@ conda create -n DebSDF python=3.10
 conda activate DebSDF
 
 pip install torch==2.2.2 torchvision==0.17.2 torchaudio==2.2.2 --index-url https://download.pytorch.org/whl/cu121
+pip install -r requirements.txt
 ```
 
 ## Dataset
